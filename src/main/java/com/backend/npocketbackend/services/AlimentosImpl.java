@@ -2,6 +2,7 @@ package com.backend.npocketbackend.services;
 
 import com.backend.npocketbackend.models.Food;
 import com.backend.npocketbackend.utils.CompactFoodToFood;
+import com.backend.npocketbackend.utils.Key;
 import com.fatsecret.platform.model.CompactFood;
 import com.fatsecret.platform.services.FatsecretService;
 import com.fatsecret.platform.services.Response;
@@ -13,8 +14,9 @@ import java.util.List;
 
 @Service
 public class AlimentosImpl implements IAlimentos {
+    Key key=new Key();
 
-    FatsecretService fatsecretService = new FatsecretService("761c409480ec407bb5827cfcfafefdc0", "e5171477731d46e3bdf63a5746282d06");
+    FatsecretService fatsecretService = new FatsecretService(key.getKey(), key.getSecret());
 
 
     @Override
